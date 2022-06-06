@@ -6,7 +6,7 @@
 import random, threading, time, zmq, sqlite3, os, sys, hashlib
 
 def randomizer():
-    return str(random.randint(0, 2))
+    return str(random.randint(0, 1))
 
 def query(num):
     db = sqlite3.connect("data.db")
