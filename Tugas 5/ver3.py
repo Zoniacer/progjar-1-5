@@ -1,3 +1,4 @@
+from ast import Num
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 import requests
@@ -61,7 +62,9 @@ def getGoBlog(msg):
     return True
 
 def main():   
-    getGoPackage("sort", 30)
+    comm = input('enter command : ')
+    num = input('enter value : ')
+    getGoPackage(comm, num)
     getGoBlog("llrb+petar")
 
 if __name__ == '__main__':
