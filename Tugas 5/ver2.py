@@ -7,10 +7,10 @@ def get_soup(url):
 
 def getGoBlog(num):
     soup = get_soup("https://go.dev/doc/")
-    #Get value tag a with beautifoulsoup in article tag
+    #
     tag = soup.find_all('article')
     
-    #Get value tag a with beautifulsoup in article tag
+    #
     tag_a = tag[0].find_all('a')
     
     total=1

@@ -75,12 +75,15 @@ def start_thread(function, *args):
     thread.daemon = True
     thread.start()
 
-def main(zcontext):
+def logger(zcontext):
     reqrep = 'tcp://127.0.0.1:6701'
     pushpull = 'tcp://127.0.0.1:6702'
     start_thread(generator, zcontext, reqrep, pushpull)
     start_thread(executor, zcontext, reqrep)
     start_thread(tally, zcontext, pushpull)
+
+def main(zcontext):
+    logger(zcontext)
     time.sleep(5)
 
 if __name__ == '__main__':
